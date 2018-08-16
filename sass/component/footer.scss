@@ -1,0 +1,54 @@
+.footer{
+    padding: 10rem ;
+    background-image: linear-gradient(to right, $color-footer-primary, $color-footer-secondary);
+    font-size: 1.4rem;
+
+    &__logo--box{
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+    &__logo{
+        width: 15rem;
+        height: auto;
+        text-align: center;
+    }
+
+    &__navigation{
+       border-top: 1px solid aliceblue;
+       padding-top: 1.5rem;
+       display: inline-block;
+    }
+    &__list{
+        list-style: none; 
+    }
+    &__item{
+        display: inline-block;
+       
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
+    }
+    &__link{
+        &:link,
+        &:visited{
+        text-decoration: none;
+        color: aliceblue;
+        text-transform: uppercase;
+        font-weight: 200;
+        display: inline-block;
+        transition: all .3s;
+        }
+        
+        &:hover, &:active {
+            color: aqua;
+            transform: rotate(5deg) scale(1.3);
+        }
+    }
+    &__privacy{
+        border-top: 1px solid aliceblue;
+        padding-top: 1.5rem;
+        display: inline-block;
+        width: 80%;
+        float: right;
+    }
+}
