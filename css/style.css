@@ -332,13 +332,13 @@ body {
   position: fixed;
   border-radius: 50%;
   z-index: 1000;
-  left: 91%;
+  right: 6.5rem;
   top: 6.5rem;
   transition: transform 0.9s cubic-bezier(0.86, 0, 0.07, 1); }
 
 .navigation__button {
   position: fixed;
-  left: 91%;
+  right: 6.5rem;
   top: 6rem;
   height: 7rem;
   width: 7rem;
@@ -405,6 +405,64 @@ body {
 .navigation__checkbox:checked + .navigation__button .navigation__bar::after {
   top: 0;
   transform: rotate(-135deg); }
+
+.popup {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__content {
+    background-color: white;
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.25);
+    display: table;
+    opacity: 0;
+    transition: all .3s .4s; }
+  .popup__img {
+    width: 100%;
+    display: block; }
+  .popup__right {
+    width: 67%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem; }
+  .popup__left {
+    width: 33%;
+    display: table-cell; }
+  .popup__text {
+    font-size: 1.4rem;
+    columns: 2;
+    column-rule: 1px solid #f7f7f7;
+    column-gap: 4rem;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto; }
+  .popup__close:link, .popup__close:visited {
+    text-decoration: none;
+    font-size: 3rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    color: #000;
+    display: inline-block;
+    transition: all .3s;
+    line-height: 1; }
 
 .section-about {
   background-color: #f7f7f7;
